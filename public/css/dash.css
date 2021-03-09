@@ -1,0 +1,150 @@
+.sub {
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 1px solid;
+  box-shadow: 0 1px 4px 0 rgba(12, 12, 13, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.15);
+  background: lightgray;
+}
+.items {
+  display: flex;
+  padding: 5px;
+  flex-wrap: wrap;
+  justify-content: center;
+  overflow: scroll;
+  height: inherit;
+}
+
+.items a {
+  min-width: 230px;
+}
+
+.item {
+  border: solid 1px gray;
+  padding: 5px;
+  margin: 15px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  position: relative;
+}
+
+.item:hover {
+  background-color: lightgray;
+}
+
+.item:hover .icon > img {
+  opacity: 1;
+}
+
+.item .icon {
+  text-align: center;
+  position: relative;
+}
+
+.item .icon > img {
+  width: 150px;
+  height: 150px;
+  border-radius: 5%;
+  opacity: 0.8;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 2;
+  border-top: 1px solid #263b643d;
+  padding: 2px;
+}
+
+.data {
+  flex-grow: 2;
+  display: flex;
+  flex-direction: column;
+}
+
+.info .title {
+  overflow: hidden;
+  white-space: break-spaces;
+  text-overflow: ellipsis;
+  line-height: 30px;
+}
+
+.info .extra {
+  font-size: 0.8em;
+  color: #9f6299;
+}
+
+.groupby {
+  padding: 0;
+  margin: 10px;
+}
+
+#grpList {
+  display: flex;
+  padding: 10px;
+}
+
+#grpList li {
+  padding: 10px;
+}
+
+.active {
+  background: #2b7de9;
+  color: white;
+}
+
+#grpDrop {
+  display: none;
+  width: 80%;
+  margin: 10px;
+  align-items: center;
+  flex: 1 1 auto;
+  padding: 10px;
+}
+
+/*******MOBILE STYLES********/
+
+@media screen and (max-width: 550px) {
+  #grpDrop {
+    display: block;
+  }
+  #grpList {
+    display: none;
+  }
+  .items {
+    display: block;
+  }
+  .item {
+    width: auto;
+    flex-direction: row;
+    margin: 5px;
+    padding: 5px;
+  }
+
+  .item .icon > img {
+    width: 50px;
+    height: 50px;
+    border: none;
+  }
+
+  .countInfo {
+    top: 10px;
+    right: 10px;
+  }
+
+  .info {
+    margin-left: 5px;
+    border: none;
+    padding: 0;
+  }
+
+  .info .count {
+    background: transparent;
+    color: black;
+  }
+
+  .groupby .btn {
+    margin-top: 5px;
+  }
+}

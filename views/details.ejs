@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include ("partial/head") %>
+    <link rel="stylesheet" href="/css/details.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script src="/js/details.js"></script>
+</head>
+
+<body>
+    <div class="page">
+        <%- include ("partial/header") %>
+        <div class="content">
+        <div class="details">
+            <div class="items">
+                <div class="group-name lang"></div>    
+                    <ul class="list">
+                    </ul>  
+            </div>
+            <div class="item">
+                <div class="group-name">Select a Guest to view Details</div>
+                <div class="selected-guest">
+                </div>
+              <a class='flowbtn'>
+                <p>
+                  X
+                </p>
+              </a>
+            </div>
+        </div>
+            </div>
+       <%- include ("partial/footer") %>
+    </div>
+</body>
+
+</html>

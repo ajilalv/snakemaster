@@ -1,0 +1,168 @@
+/* styles */
+/* called by your view template */
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+div,
+ul,
+li,
+h1 {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  font-family: "Segoe UI", "Segoe UI Web (West European)", "Segoe UI",
+    -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body,
+html {
+  height: 100%;
+}
+
+.page {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.content {
+  flex: 1 1 auto;
+  overflow: hidden;
+  height: inherit;
+}
+
+.header {
+  width: 100%;
+  z-index: 1000;
+  color: #FFF;
+  background: rgb(31, 181, 181);
+  font-size: 20px;
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 2px 9px 1px rgba(0, 0, 0, 0.12),
+    0 4px 2px -2px rgba(0, 0, 0, 0.2);
+}
+
+.header > ul {
+  display: flex;
+  justify-content: center;
+}
+
+.header a {
+  text-decoration: none;
+  color: white;
+  font-size: 0.8em;
+}
+
+.header li {
+  padding: 10px;
+}
+
+.header li:hover {
+  background: gray;
+}
+
+button {
+  cursor: pointer;
+}
+
+.btn {
+  font-family: Google Sans, Roboto, RobotoDraft, Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 0.25px;
+  line-height: 16px;
+  margin-left: 10px;
+  margin-right: 8px;
+  min-width: 96px;
+  padding: 9px 23px;
+  text-align: center;
+  vertical-align: middle;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 0.5px solid;
+}
+
+.btn:hover {
+  background: #2b7de9;
+  -moz-box-shadow: 0 1px 2px 0 rgba(66, 133, 244, 0.3),
+    0 1px 3px 1px rgba(66, 133, 244, 0.15);
+  box-shadow: 0 1px 2px 0 rgba(66, 133, 244, 0.3),
+    0 1px 3px 1px rgba(66, 133, 244, 0.15);
+  color:white;
+}
+
+.lang-en::after {
+  content: attr(data-en);
+}
+
+.lang-ml::after {
+  content: attr(data-ml);
+}
+
+.sidebar {
+  min-width: 380px;
+  padding: 10px;
+  box-sizing: border-box;
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 5px 3px 5px rgba(0, 0, 0, 0.05);
+  z-index: 201;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+/*   Common style for Count Information */
+.countInfo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  flex-direction: column;
+}
+
+.countInfo .count {
+  color: #fff;
+  font-weight: 600;
+  border-radius: 50%;
+  width: 2em;
+  height: 2em;
+  background: #3473d7;
+  text-align: center;
+  line-height: 2em;
+}
+
+.countInfo span:last-child {
+  color: #4e60a6;
+  font-size: 0.55em;
+  margin-top: 3px;
+}
+/*   ^^^^^^^^^^^^^ */
+
+.footer {
+  color: #eff0e7;
+  background: #08080f99;
+  text-align: center;
+  padding: 2px;
+  margin: 0;
+  font-size: 0.6em;
+}

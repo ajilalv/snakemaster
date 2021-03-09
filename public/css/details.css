@@ -1,0 +1,269 @@
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.group-name {
+  padding: 14px;
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 2px 9px 1px rgba(0, 0, 0, 0.12),
+    0 4px 2px -2px rgba(0, 0, 0, 0.2);
+  font-weight: 800;
+  font-size: 18px;
+  margin-bottom: 5px;
+  position: relative;
+}
+
+.circle {
+  width: 1.9em;
+  height: 1.9em;
+  line-height: 1.9em;
+  border-radius: 50%;
+  font-size: 0.95em;
+  color: #fff;
+  text-align: center;
+  background: #296e97;
+}
+
+.details {
+  display: flex;
+  overflow: hidden;
+  height: inherit;
+}
+
+.details .items {
+  display: flex;
+  flex-direction: column;
+  min-width: 25%;
+}
+
+.details .item {
+  display: flex;
+  flex-direction: column;
+  flex: 2;
+}
+
+.items .list {
+  overflow: scroll;
+  scrollbar-width: thin;
+  margin: 0;
+  padding: 0;
+}
+
+.list-item {
+  border-bottom: 0.01em solid lightgray;
+  padding: 10px;
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  position: relative;
+  align-items: center;
+}
+
+.list-item * {
+  pointer-events: none;
+  margin: 0;
+}
+
+.list-item:hover {
+  background: #b5bfe3;
+}
+
+.list-item .info {
+  flex-grow: 2;
+  margin-left: 15px;
+  display: flex;
+}
+
+.info .content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: center;
+  line-height: 1.3em;
+}
+
+.info > span {
+  line-height: 1.5em;
+}
+
+.info .title {
+  overflow: hidden;
+  white-space: break-spaces;
+  text-overflow: ellipsis;
+}
+
+.info .count {
+  color: #8e7070;
+  font-size: 12px;
+  position: absolute;
+  right: 5px;
+  top: 15px;
+}
+
+.info .extra {
+  font-size: 0.75em;
+  color: #826161;
+}
+
+.active {
+  background: #b5bfe3;
+}
+
+.selected-guest h4 {
+  margin: 3px;
+  padding: 3px;
+  background: #b5bfe3;
+}
+
+.selected-guest {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.card {
+  margin: 0.5rem;
+  padding: 0.5rem;
+  -webkit-transition: -webkit-box-shadow 0.25s;
+  /* transition: -webkit-box-shadow .25s; */
+  /* transition: box-shadow .25s; */
+  transition: box-shadow 0.25s, -webkit-box-shadow 0.25s;
+  border-radius: 2px;
+  background: #0d2a37;
+  -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+    0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+    0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+  color: white;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.card .card-content {
+  display: flex;
+  border-top: 1px solid;
+  flex: 1;
+}
+
+.card .video {
+  text-align: center;
+  width: 50%;
+  height: 50%;
+  background-size: cover;
+  cursor: pointer;
+  margin: 0 auto;
+  flex: 2;
+}
+
+.video .play {
+  color: red;
+  position: relative;
+  top: 50%;
+  pointer-events: none;
+  font-size: 3em;
+}
+
+.card-content .sub {
+  border: 1px solid transparent;
+  padding: 5px;
+  flex: 1;
+}
+
+.card .card-content .card-title {
+  display: block;
+  padding: 5px 0;
+}
+
+.card-content .subitems {
+  display: flex;
+  margin: 8px;
+  flex-direction: column;
+  border-bottom: 0.5px solid #c7ff0029;
+}
+
+.card-content .subhead {
+  font-size: 12px;
+  color: yellow;
+  min-width: 25%;
+}
+
+.flowbtn {
+  position: absolute;
+  right: 5px;
+  bottom: 15px;
+  z-index: 1;
+  width: 55px;
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: auto;
+  border-radius: 50%;
+  text-decoration: none;
+  font-size: 0;
+  text-align: center;
+  opacity: 0;
+  color: #fff;
+  background-color: #3a888c;
+  box-shadow: 3px 1px 5px 2px rgba(13, 70, 98, 0.41);
+  -ms-transform: scale(0.95) translate(0, 0);
+  transform: scale(0.95) translate(0, 0);
+  transition: transform 0.25s ease-out, opacity 150ms ease-in;
+  will-change: transform, opacity;
+}
+
+.show {
+  opacity: 1;
+  font-size: 2em;
+  font-weight: 600;
+}
+
+/* Override count for details page */
+.countInfo {
+  padding-right: 10px;
+}
+.countInfo .count {
+  line-height: 1.8em;
+  width: 1.8em;
+  height: 1.8em;
+  padding-bottom: 3px;
+}
+
+.countInfo span:last-child {
+  margin: 0;
+}
+
+/*******MOBILE STYLES********/
+
+@media screen and (max-width: 550px) {
+  .details {
+    flex-direction: column;
+  }
+
+  .card {
+    margin: 0.2em;
+  }
+  .card .video {
+    width: 100%;
+  }
+
+  .card-content .sub {
+    padding: 2px;
+    margin: 2px;
+  }
+
+  .selected-guest {
+    flex-wrap: wrap;
+  }
+
+  .details .items {
+    width: auto;
+    overflow-y: auto;
+  }
+
+  .details .item {
+    width: auto;
+    overflow-y: auto;
+  }
+}
